@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{32356088-0C11-4137-9E6A-A42E33A679A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureLoginApp.API", "..\SecureLoginApp.API\SecureLoginApp.API.csproj", "{A0FC4E39-07B7-494D-AD86-9F3209C4E22C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureLoginApp.Application", "..\SecureLoginApp.Application\SecureLoginApp.Application.csproj", "{BBE9F294-FFFC-483F-B96D-D686BA13A9A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureLoginApp.Core", "..\SecureLoginApp.Core\SecureLoginApp.Core.csproj", "{699242A9-08FB-46EE-A509-F292DF0CDE08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureLoginApp.DataAccess", "..\SecureLoginApp.DataAcces\SecureLoginApp.DataAccess.csproj", "{2090FBF2-1A1B-467F-80EC-25A3E462293E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0FC4E39-07B7-494D-AD86-9F3209C4E22C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0FC4E39-07B7-494D-AD86-9F3209C4E22C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0FC4E39-07B7-494D-AD86-9F3209C4E22C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0FC4E39-07B7-494D-AD86-9F3209C4E22C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBE9F294-FFFC-483F-B96D-D686BA13A9A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBE9F294-FFFC-483F-B96D-D686BA13A9A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBE9F294-FFFC-483F-B96D-D686BA13A9A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBE9F294-FFFC-483F-B96D-D686BA13A9A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{699242A9-08FB-46EE-A509-F292DF0CDE08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{699242A9-08FB-46EE-A509-F292DF0CDE08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{699242A9-08FB-46EE-A509-F292DF0CDE08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{699242A9-08FB-46EE-A509-F292DF0CDE08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2090FBF2-1A1B-467F-80EC-25A3E462293E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2090FBF2-1A1B-467F-80EC-25A3E462293E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2090FBF2-1A1B-467F-80EC-25A3E462293E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2090FBF2-1A1B-467F-80EC-25A3E462293E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A0FC4E39-07B7-494D-AD86-9F3209C4E22C} = {32356088-0C11-4137-9E6A-A42E33A679A2}
+		{BBE9F294-FFFC-483F-B96D-D686BA13A9A4} = {32356088-0C11-4137-9E6A-A42E33A679A2}
+		{699242A9-08FB-46EE-A509-F292DF0CDE08} = {32356088-0C11-4137-9E6A-A42E33A679A2}
+		{2090FBF2-1A1B-467F-80EC-25A3E462293E} = {32356088-0C11-4137-9E6A-A42E33A679A2}
+	EndGlobalSection
+EndGlobal
