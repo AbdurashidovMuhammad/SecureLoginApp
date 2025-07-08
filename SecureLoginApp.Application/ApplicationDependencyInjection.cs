@@ -30,6 +30,7 @@ namespace SecureLoginApp.Application
             services.AddScoped<IPasswordHasher, PasswordHasher>();
             services.AddScoped<IPermissionService, PermissionService>();
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IFileStorageService, MinioFileStorageService>();
         }
 
         private static void RegisterCashing(this IServiceCollection services)

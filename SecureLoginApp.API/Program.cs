@@ -6,6 +6,8 @@ using SecureLoginApp.DataAcces; // To'g'ri nom bo'lishi kerak, ehtimol DataAcces
 using SecureLoginApp.Application.Common;
 using System.Text;
 using SecureLoginApp.Application.Helpers;
+using Microsoft.Extensions.Options;
+using Minio;
 
 namespace SecureLoginApp.API
 {
@@ -23,6 +25,25 @@ namespace SecureLoginApp.API
             builder.Services.AddHttpContextAccessor(); // Faqat bir marta ro'yxatdan o'tkaziladi
             builder.Services.Configure<EmailConfiguration>(configuration.GetSection("EmailConfiguration"));
             builder.Services.Configure<JwtOption>(configuration.GetSection("JwtOption"));
+            builder.Services.Configure<MinioSettings>(configuration.GetSection("MinioSettings"));
+
+            builder.Services.AddSingleton<IMinioClient>(sp =>
+            {
+                var minioSettings = sp.GetRequiredService<IOptions<MinioSettings>>().Value;
+
+                // MinioClient obyektini yaratish
+                var client = new MinioClient()
+                    .WithEndpoint(minioSettings.Endpoint)
+                    .WithCredentials(minioSettings.AccessKey, minioSettings.SecretKey);
+
+                // Agar SSL yoqilgan bo'lsa
+                if (minioSettings.UseSsl)
+                {
+                    client = client.WithSSL();
+                }
+
+                return client.Build(); // MinioClient ni qurish
+            });
 
             builder.Services.AddApplication(configuration);
             builder.Services.AddDataAccess(configuration);
