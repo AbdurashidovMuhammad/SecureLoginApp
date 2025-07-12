@@ -25,12 +25,17 @@ public class AppDbContext : DbContext
     public DbSet<PermissionGroup> PermissionGroups { get; set; }
     public DbSet<RolePermission> RolePermissions { get; set; }
     public DbSet<UserRole> UserRoles { get; set; }
+    public DbSet<Order> Orders { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
 
         base.OnModelCreating(builder);
         // ⚠️ Agar kerakli `OnDelete` yoki `HasKey`, `HasIndex` lar bo‘lsa, shu yerga yoziladi
+
+        builder.Entity<Order>()
+            .Property(o => o.Id)
+            .ValueGeneratedOnAdd();
 
         // RolePermission - ko‘p-ko‘p
         builder.Entity<RolePermission>()
