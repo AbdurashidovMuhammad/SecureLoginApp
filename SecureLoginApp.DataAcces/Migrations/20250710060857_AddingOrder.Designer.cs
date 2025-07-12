@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SecureLoginApp.DataAcces.Persistence;
@@ -11,9 +12,11 @@ using SecureLoginApp.DataAcces.Persistence;
 namespace SecureLoginApp.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250710060857_AddingOrder")]
+    partial class AddingOrder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,7 +42,7 @@ namespace SecureLoginApp.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Orders", (string)null);
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("SecureLoginApp.Core.Entities.Permission", b =>
@@ -71,7 +74,7 @@ namespace SecureLoginApp.DataAccess.Migrations
 
                     b.HasIndex("PermissionGroupId");
 
-                    b.ToTable("Permissions", (string)null);
+                    b.ToTable("Permissions");
                 });
 
             modelBuilder.Entity("SecureLoginApp.Core.Entities.PermissionGroup", b =>
@@ -88,7 +91,7 @@ namespace SecureLoginApp.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PermissionGroups", (string)null);
+                    b.ToTable("PermissionGroups");
                 });
 
             modelBuilder.Entity("SecureLoginApp.Core.Entities.Role", b =>
@@ -115,7 +118,7 @@ namespace SecureLoginApp.DataAccess.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("Roles", (string)null);
+                    b.ToTable("Roles");
 
                     b.HasData(
                         new
@@ -152,7 +155,7 @@ namespace SecureLoginApp.DataAccess.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("RolePermissions", (string)null);
+                    b.ToTable("RolePermissions");
                 });
 
             modelBuilder.Entity("SecureLoginApp.Core.Entities.User", b =>
@@ -204,7 +207,7 @@ namespace SecureLoginApp.DataAccess.Migrations
 
                     b.HasIndex("RolePermissionId");
 
-                    b.ToTable("Users", (string)null);
+                    b.ToTable("Users");
 
                     b.HasData(
                         new
@@ -249,7 +252,7 @@ namespace SecureLoginApp.DataAccess.Migrations
 
                     b.HasIndex("UserOTPsId");
 
-                    b.ToTable("UserOTPs", (string)null);
+                    b.ToTable("UserOTPs");
                 });
 
             modelBuilder.Entity("SecureLoginApp.Core.Entities.UserRole", b =>
@@ -272,7 +275,7 @@ namespace SecureLoginApp.DataAccess.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserRoles", (string)null);
+                    b.ToTable("UserRoles");
 
                     b.HasData(
                         new

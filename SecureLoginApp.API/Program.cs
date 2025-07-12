@@ -8,6 +8,7 @@ using System.Text;
 using SecureLoginApp.Application.Helpers;
 using Microsoft.Extensions.Options;
 using Minio;
+using SecureLoginApp.Application.Services;
 
 namespace SecureLoginApp.API
 {
@@ -26,6 +27,8 @@ namespace SecureLoginApp.API
             builder.Services.Configure<EmailConfiguration>(configuration.GetSection("EmailConfiguration"));
             builder.Services.Configure<JwtOption>(configuration.GetSection("JwtOption"));
             builder.Services.Configure<MinioSettings>(configuration.GetSection("MinioSettings"));
+
+
 
             builder.Services.AddSingleton<IMinioClient>(sp =>
             {
