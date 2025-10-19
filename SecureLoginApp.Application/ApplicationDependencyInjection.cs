@@ -31,7 +31,9 @@ namespace SecureLoginApp.Application
             services.AddScoped<IPermissionService, PermissionService>();
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IFileStorageService, MinioFileStorageService>();
+
             services.AddSingleton<IRabbitMQProducer, RabbitMQProducer>();
+
             services.AddHostedService<RabbitMQConsumer>();
         }
 

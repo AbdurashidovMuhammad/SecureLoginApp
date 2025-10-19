@@ -4,7 +4,20 @@
       "Bash(dotnet new:*)",
       "Bash(dotnet add reference:*)",
       "Bash(dotnet add package Moq)",
-      "Bash(dotnet add package:*)"
+      "Bash(dotnet add package:*)",
+      "Bash(Get-Process -Id 5620)",
+      "Bash(Select-Object ProcessName, Id, Path)",
+      "Bash(tasklist /FI \"PID eq 5620\" /FO TABLE)",
+      "Bash(tasklist //FI \"PID eq 5620\" //FO TABLE)",
+      "Bash(curl -s http://localhost:15672)",
+      "Bash(sc stop RabbitMQ)",
+      "Bash(docker rm rabbitmq)",
+      "Bash(docker run -d --name rabbitmq -p 5673:5672 -p 15673:15672 rabbitmq:3-management)",
+      "Bash(curl -s -u guest:guest http://localhost:15673/api/overview)",
+      "Bash(netstat -ano)",
+      "Bash(findstr :5672)",
+      "Bash(findstr ESTABLISHED)",
+      "Bash(tasklist //FI \"PID eq 30904\" //FO TABLE)"
     ],
     "deny": [],
     "ask": []

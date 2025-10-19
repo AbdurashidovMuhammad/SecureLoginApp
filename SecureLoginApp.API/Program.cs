@@ -86,8 +86,7 @@ namespace SecureLoginApp.API
                     policy.WithOrigins(
                         "https://myapp.com",
                         "https://www.myapp.com",
-                        "http://localhost:3000", // Development uchun
-                        "http://127.0.0.1:5500"
+                        "http://localhost:3000"
                     )
                     // Faqat kerakli metodlarga ruxsat
                     .WithMethods("GET", "POST", "PUT", "DELETE")
@@ -113,7 +112,7 @@ namespace SecureLoginApp.API
             // ============================================
             // CORS middleware Authentication va Authorization dan OLDIN chaqirilishi kerak
             // Chunki preflight OPTIONS so'rovlari autentifikatsiyadan o'tmaydi
-            app.UseCors("StrictCorsPolicy");
+            app.UseCors("CorsPolicy");
 
             app.UseAuthentication();
             app.UseAuthorization();
