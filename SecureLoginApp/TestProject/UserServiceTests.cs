@@ -272,7 +272,7 @@ public class UserServiceTests : IDisposable
 
         // ASSERT
         result.Succeeded.Should().BeFalse();
-        result.Errors.Should().Contain("Parol noto'g'ri");
+        result.Errors.Should().Contain("Parol noto‘g‘ri");
     }
 
     [Fact]

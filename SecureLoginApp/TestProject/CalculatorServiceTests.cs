@@ -99,7 +99,7 @@ public class CalculatorServiceTests
         // ARRANGE
         int a = 10;
         int b = -3;
-        int expectedResult = 6;
+        int expectedResult = 7;
 
         // ACT
         int actualResult = _calculator.Add(a, b);
